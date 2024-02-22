@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="79">
+	<author>Glowins Modschmiede</author>
+	<version>0.9.0.0</version>
+	<title>
+		<en>Mac Crash Fix</en>
+    </title>
+    <description>
+		<en>
+<![CDATA[
+Mac Crash Fix slows down the fillType loading process to avoid a crash issue
+]]>
+		</en>
+ 	</description>	
+    <multiplayer supported="true"/>
+	<iconFilename>icon_MacFix.dds</iconFilename>
+	<extraSourceFiles>
+    	<sourceFile filename="fillTypeManagerFix.lua" />
+    </extraSourceFiles>
+</modDesc>
