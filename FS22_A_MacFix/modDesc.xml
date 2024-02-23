@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="79">
 	<author>Glowins Modschmiede</author>
-	<version>0.9.9.0</version>
+	<version>1.0.0.0</version>
 	<title>
 		<en>Mac Crash Fix</en>
     </title>
     <description>
 		<en>
 <![CDATA[
-Mac Crash Fix slows down the fillType loading process to avoid a crash issue
+Mac Crash Fix: Fixes a game crash while loading on Intel Mac
 ]]>
 		</en>
  	</description>	
