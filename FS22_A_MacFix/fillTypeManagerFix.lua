@@ -126,9 +126,20 @@ if type(xmlFile) ~= "table" then
     end)
 
     if #self.fillTypes ~= oldNumFillTypes then
---  	self:constructFillTypeTextureArrays()
+    	print("FS22_z_MacFix: constructFillTypeTextureArrays skipped: "..tostring(baseDirectory or "basegame"))
+    --  self:constructFillTypeTextureArrays()
     end
 
     return true
 end
 FillTypeManager.loadFillTypes = Utils.overwrittenFunction(FillTypeManager.loadFillTypes, fillTypeManagerFix.loadFillTypes)
+
+function fillTypeManagerFix.append_constructFillTypeTextureArrays(self)
+	print("FS22_z_MacFix: constructFillTypeTextureArrays executed")
+end
+FillTypeManager.constructFillTypeTextureArrays = Utils.appendedFunction(FillTypeManager.constructFillTypeTextureArrays, fillTypeManagerFix.append_constructFillTypeTextureArrays)
+
+function fillTypeManagerFix.append_loadMapData(self, xmlFile, missionInfo, baseDirectory)
+	self:constructFillTypeTextureArrays()
+end
+FillTypeManager.loadMapData = Utils.appendedFunction(FillTypeManager.loadMapData, fillTypeManagerFix.append_loadMapData)
