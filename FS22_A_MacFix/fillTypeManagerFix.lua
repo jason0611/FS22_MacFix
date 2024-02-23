@@ -125,9 +125,9 @@ if type(xmlFile) ~= "table" then
         end
     end)
 
-    --if #self.fillTypes ~= oldNumFillTypes then
-    --    self:constructFillTypeTextureArrays()
-    --end
+    if #self.fillTypes ~= oldNumFillTypes then
+--  	self:constructFillTypeTextureArrays()
+    end
 
     return true
 end
