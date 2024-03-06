@@ -135,7 +135,7 @@ end
 FillTypeManager.loadFillTypes = Utils.overwrittenFunction(FillTypeManager.loadFillTypes, fillTypeManagerFix.loadFillTypes)
 
 function fillTypeManagerFix.append_constructFillTypeTextureArrays(self)
-	print("FS22_z_MacFix: constructFillTypeTextureArrays executed")
+	print("FS22_z_MacFix: constructFillTypeTextureArrays executed for all fillTypes")
 end
 FillTypeManager.constructFillTypeTextureArrays = Utils.appendedFunction(FillTypeManager.constructFillTypeTextureArrays, fillTypeManagerFix.append_constructFillTypeTextureArrays)
 
